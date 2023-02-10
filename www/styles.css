@@ -1,0 +1,134 @@
+/*
+a {
+  flex: 1;
+  background-color: #FFC300 !important;
+  color: #fff !important;
+  border: 1px solid;
+  padding-top: 1.5rem;
+  text-align: center;
+  text-decoration: none;
+  transition: all 2s ease-out;
+}
+*/
+h1 {
+ padding:0 0;
+ margin:0 0;
+ float:right;
+  /*font-weight: 300%; */
+  line-height: 1;
+  color: #ad1d28;
+  transform: scale(1, 1);
+}
+
+.supercard {
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0,0.5), 0 4px 10px 0
+  rgba(0, 0, 0,0.5);
+  width: 50%;
+  height: 200px;
+  background-color: $primary;
+
+  .supercard_body {
+    padding: 0.01em 16px;
+  }
+}
+
+.grow { transition: all 1s ; }/*ease-in-out */
+.grow:hover { transform: scale(1.3); }
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(+100%);
+    opacity:0;
+  }
+  50% {
+    transform: translateX(0%);
+    opacity:0.75;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity:1;
+  }
+}
+
+.header {  
+  /* This section calls the slideInFromLeft animation we defined above */
+  animation: 1s ease-out 0s 1 slideInFromLeft;
+  animation-fill-mode: forwards;
+  background: #333;
+  padding: 30px;
+}
+
+.vbox {
+
+
+    display: block;
+    /* width: 200px;
+    height: 200px;
+    */
+    transition: all 1s;
+}
+
+.vbox:hover {
+    background-color: #FFC300;
+    transform: scale(1.1);
+    /*width: 300px;
+    height: 300px;
+    */
+}
+
+.box {
+    border-style: solid;
+    border-width: 4px;
+    border-color: white
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-color: #FFC300;
+    transition: transform 2s, background-color 0s, transform 2s;
+}
+
+.box:hover {
+    background-color: #FFC300;
+    /*width: 200px;
+    height: 200px;rotate(180deg)*/
+    transform:  scale(1.9);;
+    
+}
+
+
+
+a:hover,
+a:focus {
+  background-color: #fff !important;
+  color: #FFC300 !important;
+}
+
+.an {
+  animation-duration: 2s;
+  animation-name: slidein;
+  animation-fill-mode: forwards;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 120%;
+    width: 300%;
+  }
+  
+  25% {
+    font-size: 300%;
+    margin-left: 25%;
+    width: 150%;
+  }
+  
+  to {
+      margin-left: -100%;
+    width: 10%;
+    
+    opacity:0;
+    animation-fill-mode: forwards;
+    
+}
+
+
+
